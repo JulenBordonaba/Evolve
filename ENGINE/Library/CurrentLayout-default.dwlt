@@ -21,7 +21,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 3}
-  m_MinSize: {x: 875, y: 300}
+  m_MinSize: {x: 875, y: 542}
   m_MaxSize: {x: 10000, y: 10000}
   m_Maximized: 1
 --- !u!114 &2
@@ -135,10 +135,10 @@ MonoBehaviour:
     y: 30
     width: 1920
     height: 947
-  m_MinSize: {x: 878, y: 492}
-  m_MaxSize: {x: 16003, y: 14042}
+  m_MinSize: {x: 880, y: 492}
+  m_MaxSize: {x: 16005, y: 14042}
   vertical: 0
-  controlID: 16256
+  controlID: 155
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -160,10 +160,10 @@ MonoBehaviour:
     y: 0
     width: 1479
     height: 947
-  m_MinSize: {x: 603, y: 492}
-  m_MaxSize: {x: 12003, y: 14042}
+  m_MinSize: {x: 605, y: 492}
+  m_MaxSize: {x: 12005, y: 14042}
   vertical: 1
-  controlID: 16261
+  controlID: 86
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -186,10 +186,10 @@ MonoBehaviour:
     y: 0
     width: 1479
     height: 616
-  m_MinSize: {x: 603, y: 221}
-  m_MaxSize: {x: 12003, y: 4021}
+  m_MinSize: {x: 605, y: 221}
+  m_MaxSize: {x: 12005, y: 4021}
   vertical: 0
-  controlID: 16262
+  controlID: 87
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -235,8 +235,8 @@ MonoBehaviour:
     y: 0
     width: 703
     height: 616
-  m_MinSize: {x: 202, y: 221}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 16}
   m_Panes:
   - {fileID: 16}
@@ -447,23 +447,23 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 46db0000
+      m_SelectedIDs: e87c0000
       m_LastClickedID: 0
-      m_ExpandedIDs: 34e6feff44da000046da00004ada000050da000052da000054da000056da000058da00005ada000062da000066da00006ada00006cda00006eda000072da000076da000078da00007ada000080da000082da000084da000086da000088da00008ada00008cda00008eda000090da000092da000094da000096da000098da000032db0000
+      m_ExpandedIDs: 34dbffff32fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: LaserSpawn
-        m_OriginalName: LaserSpawn
+        m_Name: 
+        m_OriginalName: 
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: -52066
+        m_UserData: 0
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 0
+        m_OriginalEventType: 11
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 9}
       m_SearchString: 
@@ -502,16 +502,16 @@ MonoBehaviour:
   m_ShowContextualTools: 0
   m_WindowGUID: 109caf2f6cbfc4c00ad89f30a71cb36b
   m_Gizmos: 1
-  m_SceneIsLit: 0
+  m_SceneIsLit: 1
   m_SceneLighting: 1
   m_2DMode: 0
   m_isRotationLocked: 0
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 0.023631334, y: 1.4507434, z: 1.2875432}
+    m_Target: {x: -1.4141006, y: -2.3850965, z: -10.935326}
     speed: 2
-    m_Value: {x: 0.023631334, y: 1.4507434, z: 1.2875432}
+    m_Value: {x: -1.4141006, y: -2.3850965, z: -10.935326}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -524,7 +524,7 @@ MonoBehaviour:
   m_SceneViewState:
     showFog: 1
     showMaterialUpdate: 0
-    showSkybox: 0
+    showSkybox: 1
     showFlares: 1
     showImageEffects: 1
     showParticleSystems: 1
@@ -557,13 +557,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.10814897, y: -0.6608255, z: 0.09703168, w: 0.7363769}
+    m_Target: {x: -0.03498343, y: -0.8836434, z: 0.46207023, w: -0.06691248}
     speed: 2
-    m_Value: {x: 0.10814613, y: -0.66080815, z: 0.097029135, w: 0.73635757}
+    m_Value: {x: -0.034982808, y: -0.8836277, z: 0.46206203, w: -0.06691129}
   m_Size:
-    m_Target: 2.0406246
+    m_Target: 12.888516
     speed: 2
-    m_Value: 2.0406246
+    m_Value: 12.888516
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -740,14 +740,14 @@ MonoBehaviour:
   m_LastFolders:
   - Assets/_MisAssets/Scripts
   m_LastFoldersGridSize: 16
-  m_LastProjectPath: C:\Users\Julen\Desktop\Julen\Unity\ENGINE
+  m_LastProjectPath: C:\Users\Julen\Desktop\Julen\Unity\Evolve\ENGINE
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 34490000
-    m_LastClickedID: 18740
-    m_ExpandedIDs: 00000000ce480000d0480000d2480000d4480000d6480000d8480000e6480000024900002c4900002e490000a45600001a5d0000685f000072710000747100007c7100009071000000ca9a3b
+    m_SelectedIDs: e0480000
+    m_LastClickedID: 18656
+    m_ExpandedIDs: 0000000066480000684800006a4800006c4800006e480000704800008a48000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -775,7 +775,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000ce480000d0480000d2480000d4480000d6480000d848000000ca9a3b
+    m_ExpandedIDs: 0000000066480000684800006a4800006c4800006e48000070480000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -806,18 +806,18 @@ MonoBehaviour:
     m_ExpandedInstanceIDs: c6230000b6d1ffff5e41000062400000a2400000ee41000080400000d241000002410000e0400000f63f00004c4100000e4200008241000006390000d8370000eaf8ffff00000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: CubeAbility
-      m_OriginalName: CubeAbility
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 56134
+      m_UserData: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 12}
     m_CreateAssetUtility:
@@ -885,7 +885,7 @@ MonoBehaviour:
   m_ViewDataDictionary: {fileID: 0}
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: -22676
+  m_LastSelectedObjectID: 30272
 --- !u!114 &22
 MonoBehaviour:
   m_ObjectHideFlags: 52

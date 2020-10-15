@@ -10408,8 +10408,7 @@ GameObject:
   - component: {fileID: 114936781036801864}
   - component: {fileID: 114250739022748346}
   - component: {fileID: 9045076225645120822}
-  - component: {fileID: 8010843665512453799}
-  - component: {fileID: 7812138140908333412}
+  - component: {fileID: 2607380269047304064}
   m_Layer: 10
   m_Name: Suit 1
   m_TagString: Player
@@ -10904,7 +10903,7 @@ MonoBehaviour:
   baseDamageReduction: 0
   baseMovementSpeed: 5
   movementSpeedMultiplier: 1
---- !u!114 &8010843665512453799
+--- !u!114 &2607380269047304064
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -10913,26 +10912,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 1414176428383784}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e31a2b079ff58954ebeeb95326468514, type: 3}
+  m_Script: {fileID: 11500000, guid: 9c7f59d48d06ae149b0941b027b08b52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  laserPrefab: {fileID: 1506638734190909748, guid: 17fe68f3bb2a0bc4c8b86bb798f79897,
-    type: 3}
-  spawnPoint: {fileID: 1049789013819473623}
-  laserRate: 2
-  startTime: 1
---- !u!114 &7812138140908333412
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1414176428383784}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 91d66ec0ba285ae47bbf13bcb0bf97a1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  cube: {fileID: 2669621170004468424}
+  myCamera: {fileID: 0}
+  distanceTravelledPerSecond: 20
+  hitLayers:
+    serializedVersion: 2
+    m_Bits: 8192
 --- !u!1 &1414199094847710
 GameObject:
   m_ObjectHideFlags: 0
@@ -12063,7 +12051,7 @@ GameObject:
   - component: {fileID: 2669621170004468424}
   - component: {fileID: 8516259605965599071}
   m_Layer: 10
-  m_Name: GameObject
+  m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
