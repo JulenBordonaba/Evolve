@@ -35,6 +35,8 @@ public class PulseAbility : Ability
 
     public GameObject effectGuide;
 
+    public float attackRangeForAI = 10f;
+
     private void Start()
     {
         //chicos, no hagáis esto en casa
@@ -49,11 +51,13 @@ public class PulseAbility : Ability
 
         if (Input.GetKeyDown(abilityKey))
         {
-
-            if (!isCasting)
+            if(canUse)
             {
-                isCasting = true;
-                effectGuide.SetActive(true);
+                if (!isCasting)
+                {
+                    isCasting = true;
+                    effectGuide.SetActive(true);
+                }
             }
         }
 
@@ -69,6 +73,13 @@ public class PulseAbility : Ability
             if (Input.GetMouseButton(0))
             {
                 CastAbility(aimPoint);
+                StartCoroutine(Cooldown());
+                effectGuide.SetActive(false);
+                isCasting = false;
+            }
+            else if (Input.GetMouseButton(1))
+            {
+                isCasting = false;
                 effectGuide.SetActive(false);
             }
         }
@@ -103,8 +114,10 @@ public class PulseAbility : Ability
         {
             laserCoroutine = StartCoroutine(LaserCoroutine());
         }
-
-        effectGuide.SetActive(false);
+        if(effectGuide)
+        {
+            effectGuide.SetActive(false);
+        }
 
     }
 
@@ -124,7 +137,11 @@ public class PulseAbility : Ability
     public void CastAbility(Vector3 castPosition)
     {
         if (!abilityEnabled) return;
+
+        print(castPosition);
+
         GameObject laser = Instantiate(laserPrefab, castPosition, Quaternion.identity);
+        laser.transform.position = castPosition;
 
         OnTouchDamage onTouchDamage = laser.GetComponent<OnTouchDamage>();
 
@@ -139,16 +156,26 @@ public class PulseAbility : Ability
 
     IEnumerator LaserCoroutine()
     {
+        yield return null;
         while (true)
         {
             if (!player)
             {
                 player = GameObject.FindGameObjectWithTag("Player").transform;
             }
-            Vector3 castPosition = player.position;
-            yield return new WaitForSeconds(0.5f);
-            CastAbility(castPosition);
-            yield return new WaitForSeconds(laserRate - 0.5f);
+            if (Vector3.Distance(transform.position, player.transform.position)<attackRangeForAI)
+            {
+                
+                Vector3 castPosition = player.position;
+                yield return new WaitForSeconds(0.5f);
+                CastAbility(castPosition);
+                yield return new WaitForSeconds(laserRate - 0.5f);
+            }
+            else
+            {
+                yield return new WaitForEndOfFrame();
+            }
+            
         }
     }
 }

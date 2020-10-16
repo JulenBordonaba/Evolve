@@ -1771,6 +1771,53 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 983049141}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2019523199
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2019523198}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b356d287a08b924099be881cf42b947, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  abilityEnabled: 0
+  abilityID: PulseAbility
+  cubeColor: {r: 0, g: 0, b: 0, a: 0}
+  isAI: 1
+  laserPrefab: {fileID: 7243549030181696198, guid: 166f436a251844e4d980e57e5c43feb8,
+    type: 3}
+  laserRate: 4
+  destroyTime: 1.5
+  affectedTags: []
+  damage: 5
+  abilityKey: 0
+  cooldown: 3
+  myCamera: {fileID: 0}
+  hitLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  player: {fileID: 0}
+  effectGuide: {fileID: 0}
+  attackRangeForAI: 10
+--- !u!114 &2019523200
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2019523198}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ecb9a42719303c41bdf4942dba0f69f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  abilities: []
+  startingAbilityIDs:
+  - PulseAbility
+  cubeRenderer: {fileID: 0}
 --- !u!114 &2019523216
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1996,6 +2043,11 @@ PrefabInstance:
       propertyPath: m_CameraDistance
       value: 20
       objectReference: {fileID: 0}
+    - target: {fileID: 759855279148308545, guid: 9edcf7e494cf3e640b18cb7495fb179a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9edcf7e494cf3e640b18cb7495fb179a, type: 3}
 --- !u!1001 &1833136811237591907
@@ -2008,12 +2060,12 @@ PrefabInstance:
     - target: {fileID: 1833136811894530885, guid: 168fcceb972cad04fa79be96da5e3b56,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -11.3
+      value: -7.23
       objectReference: {fileID: 0}
     - target: {fileID: 1833136811894530885, guid: 168fcceb972cad04fa79be96da5e3b56,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 10.8
+      value: 3.56
       objectReference: {fileID: 0}
     - target: {fileID: 1833136811894530885, guid: 168fcceb972cad04fa79be96da5e3b56,
         type: 3}
@@ -2028,7 +2080,7 @@ PrefabInstance:
     - target: {fileID: 1833136811894530885, guid: 168fcceb972cad04fa79be96da5e3b56,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.9996586
+      value: -0.00085056806
       objectReference: {fileID: 0}
     - target: {fileID: 1833136811894530885, guid: 168fcceb972cad04fa79be96da5e3b56,
         type: 3}
@@ -2038,7 +2090,7 @@ PrefabInstance:
     - target: {fileID: 1833136811894530885, guid: 168fcceb972cad04fa79be96da5e3b56,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.026129836
+      value: 0.99999964
       objectReference: {fileID: 0}
     - target: {fileID: 1833136811894530885, guid: 168fcceb972cad04fa79be96da5e3b56,
         type: 3}
@@ -2053,7 +2105,7 @@ PrefabInstance:
     - target: {fileID: 1833136811894530885, guid: 168fcceb972cad04fa79be96da5e3b56,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 182.995
+      value: -0.097
       objectReference: {fileID: 0}
     - target: {fileID: 1833136811894530885, guid: 168fcceb972cad04fa79be96da5e3b56,
         type: 3}
