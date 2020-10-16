@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4938782674451610}
   m_Layer: 13
   m_Name: mmntnsrig:Spine1
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 137819709281987782}
   m_Layer: 13
   m_Name: Shirt
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -140,7 +140,7 @@ GameObject:
   - component: {fileID: 137139130187754492}
   m_Layer: 13
   m_Name: Jersey
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -232,7 +232,7 @@ GameObject:
   - component: {fileID: 4085111210183828}
   m_Layer: 13
   m_Name: mmntnsrig:RightUpLeg
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -263,7 +263,7 @@ GameObject:
   - component: {fileID: 4560573593015820}
   m_Layer: 13
   m_Name: mmntnsrig:Head
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -294,7 +294,7 @@ GameObject:
   - component: {fileID: 4690115706952640}
   m_Layer: 13
   m_Name: mmntnsrig:Hips
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -341,9 +341,12 @@ GameObject:
   - component: {fileID: 114441692865175846}
   - component: {fileID: 114305636692334404}
   - component: {fileID: 114904761902952826}
+  - component: {fileID: 2019523199}
+  - component: {fileID: 2019523200}
+  - component: {fileID: 2019523216}
   m_Layer: 13
   m_Name: PatrolAndPathfinderAI
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -408,8 +411,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7c88994d153c654449e4c5012ac55def, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   Gravity: 40
   GravityActive: 1
   CrouchedRaycastLengthMultiplier: 1
@@ -483,11 +486,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5fe81ad80cb743b408fa90b048ad597f, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   CharacterDimension: 0
   CharacterType: 1
-  PlayerID:
+  PlayerID: 
   DirectionOnSpawn: 0
   CharacterAnimator: {fileID: 95828089102008612}
   UseDefaultMecanim: 1
@@ -505,8 +508,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1f2dd01ffdd1cc045a614bd354672723, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   AbilityStartSfx: {fileID: 0}
   AbilityInProgressSfx: {fileID: 0}
   AbilityStopSfx: {fileID: 0}
@@ -541,8 +544,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 69614a4a3cfd06d4e8388acafdb774bd, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   AbilityStartSfx: {fileID: 0}
   AbilityInProgressSfx: {fileID: 0}
   AbilityStopSfx: {fileID: 0}
@@ -551,7 +554,7 @@ MonoBehaviour:
   AbilityPermitted: 1
   Movement: 0
   InputAuthorized: 1
-  WalkSpeed: 4
+  AnalogInput: 0
   ShouldSetMovement: 1
   IdleThreshold: 0.05
   Acceleration: 10
@@ -572,8 +575,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6a07c6668aa55403790d27b575279549, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   AbilityStartSfx: {fileID: 0}
   AbilityInProgressSfx: {fileID: 0}
   AbilityStopSfx: {fileID: 0}
@@ -606,8 +609,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 443ebf149b5f47147a1076bea95f5134, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   Target: {fileID: 0}
   DistanceToWaypointThreshold: 1
   DebugDrawPath: 1
@@ -625,8 +628,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8abe6344b7148db4687d3c84e7712904, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   HealthBarType: 1
   TimeScale: 0
   HealthBarPrefab: {fileID: 0}
@@ -824,13 +827,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 01754710d9f92ec4d9a21b81f5682667, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   Model: {fileID: 1520497405874004}
   CurrentHealth: 0
   Invulnerable: 0
-  InitialHealth: 50
-  MaximumHealth: 50
   ImmuneToKnockback: 0
   DamageMMFeedbacks: {fileID: 0}
   DestroyOnDeath: 1
@@ -841,6 +842,10 @@ MonoBehaviour:
   DisableModelOnDeath: 1
   DisableCollisionsOnDeath: 1
   DisableChildCollisionsOnDeath: 0
+  ChangeLayerOnDeath: 0
+  ChangeLayersRecursivelyOnDeath: 0
+  LayerOnDeath:
+    _layerIndex: 0
   DeathMMFeedbacks: {fileID: 4698257951579629862}
 --- !u!114 &114086387399110956
 MonoBehaviour:
@@ -852,8 +857,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: eec89e4158bf96841b9bc830fc5385ca, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   States:
   - StateName: Patrolling
     Actions:
@@ -864,7 +869,7 @@ MonoBehaviour:
       array:
       - Decision: {fileID: 114354343164434314}
         TrueState: PathfindToTarget
-        FalseState:
+        FalseState: 
   - StateName: PathfindToTarget
     Actions:
       array:
@@ -875,6 +880,7 @@ MonoBehaviour:
   BrainActive: 1
   TimeInThisState: 0
   Target: {fileID: 0}
+  _lastKnownTargetPosition: {x: 0, y: 0, z: 0}
   ActionsFrequency: 0
   DecisionFrequency: 0
 --- !u!114 &114354343164434314
@@ -887,9 +893,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 210ecb3d02181d244935dc0092d62a8f, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
-  Label:
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Label: 
   Radius: 8
   DetectionOriginOffset: {x: 0, y: 0, z: 0}
   TargetLayerMask:
@@ -910,15 +916,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ab38fb8d19ed4db48b4e6216a171c08f, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
-  Label:
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Label: 
   ChangeDirectionOnObstacle: 1
   ObstacleDetectionDistance: 1
   ObstaclesCheckFrequency: 1
   ObstacleLayerMask:
     serializedVersion: 2
     m_Bits: 6400
+  CurrentPathIndex: 0
 --- !u!114 &114441692865175846
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -929,8 +936,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b81dc1a6e4b189d4bae2faab8a2a1a25, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   CycleOption: 1
   LoopInitialMovementDirection: 0
   PathElements:
@@ -953,9 +960,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3320c9b468b2c8a4692e20ae1e813732, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
-  Label:
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Label: 
 --- !u!114 &114904761902952826
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -966,9 +973,73 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5758bd960e1ca6d41828c58712425d60, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
-  Label:
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Label: 
+--- !u!114 &2019523199
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1268774173141522}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b356d287a08b924099be881cf42b947, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  abilityEnabled: 0
+  abilityID: PulseAbility
+  cubeColor: {r: 0, g: 0, b: 0, a: 0}
+  isAI: 1
+  laserPrefab: {fileID: 7243549030181696198, guid: 166f436a251844e4d980e57e5c43feb8,
+    type: 3}
+  laserRate: 4
+  destroyTime: 1.5
+  affectedTags: []
+  damage: 5
+  abilityKey: 0
+  cooldown: 3
+  myCamera: {fileID: 0}
+  hitLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  player: {fileID: 0}
+  effectGuide: {fileID: 0}
+  attackRangeForAI: 10
+--- !u!114 &2019523200
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1268774173141522}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ecb9a42719303c41bdf4942dba0f69f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  abilities: []
+  startingAbilityIDs:
+  - PulseAbility
+  cubeRenderer: {fileID: 0}
+--- !u!114 &2019523216
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1268774173141522}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6dfaa1c222a3af4b83d61942f11502b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  baseMaximumHealth: 10
+  initialHealth: 10
+  baseDamageReduction: 0
+  baseMovementSpeed: 5
+  movementSpeedMultiplier: 1
 --- !u!1 &1289092664462840
 GameObject:
   m_ObjectHideFlags: 0
@@ -980,7 +1051,7 @@ GameObject:
   - component: {fileID: 4954397250907562}
   m_Layer: 13
   m_Name: mmntnsrig:Spine
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1011,7 +1082,7 @@ GameObject:
   - component: {fileID: 4797210801099158}
   m_Layer: 13
   m_Name: mmntnsrig:LeftToeBase
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1042,7 +1113,7 @@ GameObject:
   - component: {fileID: 4524197967156672}
   m_Layer: 13
   m_Name: mmntnsrig:LeftForeArm
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1073,7 +1144,7 @@ GameObject:
   - component: {fileID: 4281481923569640}
   m_Layer: 13
   m_Name: mmntnsrig:LeftLeg
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1105,7 +1176,7 @@ GameObject:
   - component: {fileID: 137086725935998336}
   m_Layer: 13
   m_Name: Dude
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1203,7 +1274,7 @@ GameObject:
   - component: {fileID: 4571142887914874}
   m_Layer: 13
   m_Name: mmntnsrig:RightHandIndex1
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1236,7 +1307,7 @@ GameObject:
   - component: {fileID: 199917179049515670}
   m_Layer: 13
   m_Name: TouchTheGroundParticles
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6056,7 +6127,7 @@ GameObject:
   - component: {fileID: 114737374452256356}
   m_Layer: 13
   m_Name: WeaponAttachment
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6086,8 +6157,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 347013242dca7c44fb5001793033ea59, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UpdateMode: 0
   PositionActive: 0
   RotationActive: 0
   ScaleActive: 0
@@ -6313,7 +6385,7 @@ GameObject:
   - component: {fileID: 4788610195145254}
   m_Layer: 13
   m_Name: Feedbacks
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6346,7 +6418,7 @@ GameObject:
   - component: {fileID: 137085087079556108}
   m_Layer: 13
   m_Name: Pants
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6436,7 +6508,7 @@ GameObject:
   - component: {fileID: 4075246023408412}
   m_Layer: 13
   m_Name: mmntnsrig:RightHandIndex4
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6468,7 +6540,7 @@ GameObject:
   - component: {fileID: 199302993966105794}
   m_Layer: 13
   m_Name: WalkParticles
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11287,7 +11359,7 @@ GameObject:
   - component: {fileID: 4897356620441330}
   m_Layer: 13
   m_Name: mmntnsrig:LeftUpLeg
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11318,7 +11390,7 @@ GameObject:
   - component: {fileID: 4937632522172514}
   m_Layer: 13
   m_Name: mmntnsrig:RightToeBase
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11349,7 +11421,7 @@ GameObject:
   - component: {fileID: 4087325622625052}
   m_Layer: 13
   m_Name: mmntnsrig:RightHandIndex3
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11380,7 +11452,7 @@ GameObject:
   - component: {fileID: 4737512417926390}
   m_Layer: 13
   m_Name: mmntnsrig:RightToe_End
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11410,7 +11482,7 @@ GameObject:
   - component: {fileID: 4682416765522042}
   m_Layer: 13
   m_Name: mmntnsrig:HeadTop_End
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11442,7 +11514,7 @@ GameObject:
   - component: {fileID: 114187559144326062}
   m_Layer: 13
   m_Name: SuitModel
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11484,7 +11556,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
-  m_WarningMessage:
+  m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -11498,8 +11570,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 38e070f8d39696f4ea2d559622f8babb, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   LeftHandTarget: {fileID: 0}
   RightHandTarget: {fileID: 0}
   AttachLeftHand: 1
@@ -11515,7 +11587,7 @@ GameObject:
   - component: {fileID: 4893615746771016}
   m_Layer: 13
   m_Name: mmntnsrig:LeftHandIndex3
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11546,7 +11618,7 @@ GameObject:
   - component: {fileID: 4807604666757344}
   m_Layer: 13
   m_Name: mmntnsrig:LeftShoulder
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11577,7 +11649,7 @@ GameObject:
   - component: {fileID: 4494331637064812}
   m_Layer: 13
   m_Name: mmntnsrig:LeftHandIndex4
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11607,7 +11679,7 @@ GameObject:
   - component: {fileID: 4694451846805690}
   m_Layer: 13
   m_Name: mmntnsrig:RightFoot
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11638,7 +11710,7 @@ GameObject:
   - component: {fileID: 4126456964749564}
   m_Layer: 13
   m_Name: mmntnsrig:LeftHandIndex1
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11669,7 +11741,7 @@ GameObject:
   - component: {fileID: 4477640748154568}
   m_Layer: 13
   m_Name: mmntnsrig:RightForeArm
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11700,7 +11772,7 @@ GameObject:
   - component: {fileID: 4560093482988632}
   m_Layer: 13
   m_Name: mmntnsrig:LeftToe_End
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11730,7 +11802,7 @@ GameObject:
   - component: {fileID: 4424422032915472}
   m_Layer: 13
   m_Name: mmntnsrig:RightHandIndex2
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11761,7 +11833,7 @@ GameObject:
   - component: {fileID: 4644299663623962}
   m_Layer: 13
   m_Name: mmntnsrig:LeftHand
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11792,7 +11864,7 @@ GameObject:
   - component: {fileID: 4170611956810104}
   m_Layer: 13
   m_Name: mmntnsrig:RightArm
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11823,7 +11895,7 @@ GameObject:
   - component: {fileID: 4645974910602094}
   m_Layer: 13
   m_Name: mmntnsrig:RightShoulder
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11854,7 +11926,7 @@ GameObject:
   - component: {fileID: 4507832789745576}
   m_Layer: 13
   m_Name: mmntnsrig:Neck
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11886,7 +11958,7 @@ GameObject:
   - component: {fileID: 137917027628792522}
   m_Layer: 13
   m_Name: Shoes
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11975,7 +12047,7 @@ GameObject:
   - component: {fileID: 4498335228960166}
   m_Layer: 13
   m_Name: mmntnsrig:RightLeg
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12006,7 +12078,7 @@ GameObject:
   - component: {fileID: 4640826670941830}
   m_Layer: 13
   m_Name: mmntnsrig:LeftFoot
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12037,7 +12109,7 @@ GameObject:
   - component: {fileID: 4085825307275390}
   m_Layer: 13
   m_Name: mmntnsrig:Spine2
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12070,7 +12142,7 @@ GameObject:
   - component: {fileID: 4101285030279156}
   m_Layer: 13
   m_Name: mmntnsrig:LeftArm
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12101,7 +12173,7 @@ GameObject:
   - component: {fileID: 4467281986311234}
   m_Layer: 13
   m_Name: mmntnsrig:LeftHandIndex2
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12132,7 +12204,7 @@ GameObject:
   - component: {fileID: 4846164841247422}
   m_Layer: 13
   m_Name: mmntnsrig:RightHand
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12169,7 +12241,7 @@ GameObject:
   - component: {fileID: 6895393216076707337}
   m_Layer: 13
   m_Name: DeathFeedback
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12198,8 +12270,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 841b72de2996c5c40bfb394f3d0e0a98, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   Feedbacks:
   - {fileID: 1793499876390623322}
   - {fileID: 4725363786306309022}
@@ -12220,8 +12292,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0c2ce51367856bd49b72678cc4263225, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   Active: 1
   Label: Sound
   Chance: 100
@@ -12240,6 +12312,7 @@ MonoBehaviour:
   Sfx: {fileID: 8300000, guid: 975de4270f79d5946957a8aa6dddccc0, type: 3}
   RandomSfx: []
   TestButton: 0
+  TestStopButton: 0
   PlayMethod: 0
   PoolSize: 10
   MinVolume: 1
@@ -12257,8 +12330,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cdfe4b9b079619143a9748eeee75e698, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   Active: 1
   Label: Particles Instantiation
   Chance: 100
@@ -12294,8 +12367,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 86fec89a17b5b2347a82ae1c77aced3d, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   Active: 1
   Label: Freeze Frame
   Chance: 100
@@ -12322,8 +12395,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6b50cd65cc53b9e46bdaae0a40ba6704, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   Active: 1
   Label: Bloom
   Chance: 100
@@ -12424,8 +12497,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6ba1d39e1a4e0a142831b5815b528429, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   Active: 1
   Label: Cinemachine Impulse
   Chance: 100

@@ -10643,7 +10643,7 @@ MonoBehaviour:
   baseMaximumHealth: 10
   initialHealth: 10
   baseDamageReduction: 0
-  baseMovementSpeed: 5
+  baseMovementSpeed: 7
   movementSpeedMultiplier: 1
 --- !u!114 &1058069329082487625
 MonoBehaviour:
@@ -10659,7 +10659,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   abilities: []
   startingAbilityIDs:
-  - CubeAbility
+  - PulseAbility
   cubeRenderer: {fileID: 7813333616053207811}
 --- !u!114 &2607380269047304064
 MonoBehaviour:
@@ -10785,11 +10785,12 @@ MonoBehaviour:
   abilityID: PulseAbility
   cubeColor: {r: 0.6388949, g: 0.30286577, b: 0.7735849, a: 0}
   isAI: 0
-  laserPrefab: {fileID: 7243549030181696198, guid: 166f436a251844e4d980e57e5c43feb8,
+  laserPrefab: {fileID: 581836078723913903, guid: 7ec8e320041b2ba4fa11951979cfab02,
     type: 3}
   laserRate: 4
-  destroyTime: 1.5
-  affectedTags: []
+  destroyTime: 1
+  affectedTags:
+  - Enemy
   damage: 5
   abilityKey: 113
   cooldown: 3
@@ -12140,6 +12141,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   character: {fileID: 1414176428383784}
   cubeAbility: {fileID: 2607380269047304064}
+  onTouchDamage: {fileID: 1825254467864387905}
 --- !u!114 &1825254467864387905
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12158,6 +12160,7 @@ MonoBehaviour:
   damage: 5
   affectedTags:
   - Enemy
+  disabled: 0
 --- !u!1 &6966358654987237781
 GameObject:
   m_ObjectHideFlags: 0
@@ -12278,7 +12281,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 898cd5485eec2f447a90dd156443f972, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

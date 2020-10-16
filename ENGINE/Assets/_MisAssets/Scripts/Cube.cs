@@ -10,8 +10,8 @@ public class Cube : MonoBehaviour
     private AbilityManager abilityManager;
 
     public CubeAbility cubeAbility;
-    
 
+    public OnTouchDamage onTouchDamage;
 
     private void Start()
     {
@@ -19,7 +19,10 @@ public class Cube : MonoBehaviour
     }
 
 
-
+    private void Update()
+    {
+        onTouchDamage.disabled = !cubeAbility.abilityEnabled;
+    }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -32,7 +35,7 @@ public class Cube : MonoBehaviour
 
                 abilityManager.DisableAllAbilities();
                 abilityManager.EnableAbility(ability.abilityID);
-
+                
 
             }
 

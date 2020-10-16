@@ -39,8 +39,6 @@ public class PulseAbility : Ability
 
     private void Start()
     {
-        //chicos, no hagáis esto en casa
-        player = GameObject.FindGameObjectWithTag("Player").transform;
         myCamera = Camera.main;
     }
 
@@ -63,12 +61,10 @@ public class PulseAbility : Ability
 
         if (isCasting)
         {
-            //código de cancelar
-            //Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
             Vector3 aimPoint = AimAbility();
             if (aimPoint != Vector3.zero)
             {
-                effectGuide.transform.position = aimPoint;
+                effectGuide.transform.position = aimPoint+ new Vector3(0,0.05f,0);
             }
             if (Input.GetMouseButton(0))
             {
@@ -118,6 +114,18 @@ public class PulseAbility : Ability
         {
             effectGuide.SetActive(false);
         }
+        if(!player)
+        {
+            try
+            {
+                //chicos, no hagáis esto en casa
+                player = GameObject.FindGameObjectWithTag("Player").transform;
+            }
+            catch
+            {
+
+            }
+        }
 
     }
 
@@ -129,19 +137,24 @@ public class PulseAbility : Ability
         {
             StopCoroutine(laserCoroutine);
         }
-        Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
+
+
+        if (effectGuide)
+        {
+            effectGuide.SetActive(false);
+        }
 
     }
 
 
     public void CastAbility(Vector3 castPosition)
     {
+        print("Cast Meteorito");
         if (!abilityEnabled) return;
-
-        print(castPosition);
+        
+        castPosition += new Vector3(0, 0.05f, 0);
 
         GameObject laser = Instantiate(laserPrefab, castPosition, Quaternion.identity);
-        laser.transform.position = castPosition;
 
         OnTouchDamage onTouchDamage = laser.GetComponent<OnTouchDamage>();
 
@@ -149,7 +162,6 @@ public class PulseAbility : Ability
         onTouchDamage.damage = damage;
         onTouchDamage.affectedTags = affectedTags;
 
-        laser.transform.localPosition = Vector3.zero;
 
         Destroy(laser, destroyTime);
     }
@@ -167,9 +179,8 @@ public class PulseAbility : Ability
             {
                 
                 Vector3 castPosition = player.position;
-                yield return new WaitForSeconds(0.5f);
                 CastAbility(castPosition);
-                yield return new WaitForSeconds(laserRate - 0.5f);
+                yield return new WaitForSeconds(laserRate);
             }
             else
             {

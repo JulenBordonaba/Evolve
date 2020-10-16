@@ -47,7 +47,7 @@ namespace MoreMountains.TopDownEngine
         /// </summary>
         protected virtual void DetectMouse()
         {
-            if (Input.GetMouseButtonDown(1))
+            if (Input.GetMouseButton(1))
             {
                 Ray ray = _mainCamera.ScreenPointToRay(Input.mousePosition);
                 Debug.DrawRay(ray.origin, ray.direction * 100, Color.yellow);

@@ -20,7 +20,11 @@ public class CubeAbility : Ability
 
     private bool isReturning = false;
 
+    private bool isGoing = false;
+
     private bool canMove = true;
+
+    private Transform target;
 
     //Tween returnTween;
 
@@ -42,6 +46,11 @@ public class CubeAbility : Ability
             Return();
         }
 
+        if(isGoing)
+        {
+            Go();
+        }
+
         if (!abilityEnabled) return;
         if (Input.GetMouseButtonDown(0))
         {
@@ -51,6 +60,17 @@ public class CubeAbility : Ability
             }
         }
 
+    }
+
+    public void Go()
+    {
+        float travelDist = Vector3.Distance(cube.position, target.position);
+
+        float movementTime = travelDist / distanceTravelledPerSecond;
+
+        Tween myTween = cube.DOMove(target.position, movementTime);
+
+        myTween.OnComplete(OnCubeGone);
     }
 
     public override void OnAbilityDisabled()
@@ -79,19 +99,17 @@ public class CubeAbility : Ability
 
             canMove = false;
 
-            float travelDist = Vector3.Distance(cube.position,hit.point);
+            isGoing = true;
 
-            float movementTime = travelDist / distanceTravelledPerSecond;
-
-            Tween myTween = cube.DOMove(hit.point, movementTime);
-
-            myTween.OnComplete(OnCubeGone);
+            target = hit.transform;
         }
     }
 
     void OnCubeGone()
     {
         isReturning = true;
+
+        isGoing = false;
     }
 
     void Return()
