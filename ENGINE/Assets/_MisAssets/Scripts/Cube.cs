@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using MoreMountains.TopDownEngine;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -7,6 +8,10 @@ public class Cube : MonoBehaviour
     public GameObject character;
 
     private AbilityManager abilityManager;
+
+    public CubeAbility cubeAbility;
+    
+
 
     private void Start()
     {
@@ -18,7 +23,8 @@ public class Cube : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.CompareTag("Enemies"))
+        if (!cubeAbility.abilityEnabled) return;
+        if(other.CompareTag("Enemy"))
         {
             if(other.GetComponentInParent<Ability>())
             {
@@ -26,7 +32,11 @@ public class Cube : MonoBehaviour
 
                 abilityManager.DisableAllAbilities();
                 abilityManager.EnableAbility(ability.abilityID);
+
+
             }
+
+            
         }
     }
 }

@@ -6,9 +6,9 @@ public class AbilityManager : MonoBehaviour
 {
     public List<Ability> abilities = new List<Ability>();
 
-    public string startingAbilityID;
+    public string[] startingAbilityIDs;
 
-
+    public Renderer cubeRenderer;
 
 
     // Start is called before the first frame update
@@ -17,32 +17,35 @@ public class AbilityManager : MonoBehaviour
         abilities = new List<Ability>( GetComponents<Ability>());
 
         DisableAllAbilities();
-
-        EnableAbility(startingAbilityID);
+        for (int i = 0; i < startingAbilityIDs.Length; i++)
+        {
+            EnableAbility(startingAbilityIDs[i]);
+        }
 
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
+    
     public void EnableAbility(string _id)
     {
         Ability abilityToEnable = GetAbilityByID(_id);
 
 
-        abilityToEnable.enabledAbility = true;
+        abilityToEnable.abilityEnabled = true;
+        if(cubeRenderer)
+        {
+            cubeRenderer.material.color = abilityToEnable.cubeColor;
+        }
+        abilityToEnable.OnAbilityEnabled();
     }
 
     public void DisableAllAbilities()
     {
         foreach(Ability ability in abilities)
         {
-            ability.enabledAbility = false;
+            ability.abilityEnabled = false;
+            ability.OnAbilityDisabled();
         }
     }
+    
 
     public Ability GetAbilityByID(string _id)
     {

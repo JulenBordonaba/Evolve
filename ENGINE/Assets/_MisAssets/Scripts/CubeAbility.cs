@@ -14,6 +14,8 @@ public class CubeAbility : Ability
 
     public LayerMask hitLayers;
 
+    public OnTouchDamage onTouchDamage;
+
     private Vector3 initialLocalPos;
 
     private bool isReturning = false;
@@ -34,14 +36,14 @@ public class CubeAbility : Ability
     void Update()
     {
 
-        if (!enabledAbility) return;
 
         if(isReturning)
         {
             Return();
         }
 
-        if(Input.GetMouseButtonDown(1))
+        if (!abilityEnabled) return;
+        if (Input.GetMouseButtonDown(0))
         {
             if(canMove)
             {
@@ -49,6 +51,20 @@ public class CubeAbility : Ability
             }
         }
 
+    }
+
+    public override void OnAbilityDisabled()
+    {
+        base.OnAbilityDisabled();
+        //cube.gameObject.SetActive(false);
+        onTouchDamage.enabled = false;
+    }
+
+    public override void OnAbilityEnabled()
+    {
+        base.OnAbilityEnabled();
+        //cube.gameObject.SetActive(true);
+        onTouchDamage.enabled = true;
     }
 
     void SetDestination()
@@ -75,13 +91,11 @@ public class CubeAbility : Ability
 
     void OnCubeGone()
     {
-        print("OnCubeGone");
         isReturning = true;
     }
 
     void Return()
     {
-        print("REturn");
 
         float travelDist = Vector3.Distance(cube.position, cube.parent.position + initialLocalPos);
 

@@ -240,7 +240,8 @@ namespace MoreMountains.TopDownEngine
 
 			// we decrease the character's health by the damage
 			float previousHealth = CurrentHealth;
-			CurrentHealth -= damage;
+            int finalDamage = (int)(((float)damage / 100f) * (100 - stats.DamageReduction));
+			CurrentHealth -= finalDamage;
 
             if (OnHit != null)
             {
